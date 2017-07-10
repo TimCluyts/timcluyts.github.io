@@ -1,10 +1,13 @@
 -   id: 1
-    title: My Project    
-    img: 1.jpg
+    title: Contractor's portal    
+    img: cp.jpg
     width: 8
     height: 2
+    url: cp
+    # fontColor: black-text
 -   id: 2
-    title: Some other project I did 
+    title: GetSudo Units Planner 
     img: 2.jpg
     width: 4
     height: 2
+    url: gup

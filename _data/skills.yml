@@ -1,6 +1,6 @@
 -   id: javascript
     descr: javascript    
-    xp: 6
+    xp: 9
 -   id: css
     descr: css
     color: teal
@@ -10,7 +10,7 @@
     xp: 3
 -   id: angular
     descr: angularjs    
-    xp: 8
+    xp: 1
 -   id: java
     descr: java    
     xp: 5
@@ -22,7 +22,7 @@
     xp: 3
 -   id: node.js
     descr: node.js 
-    xp: 2
+    xp: 9
 -   id: php
     descr: php
     xp: 4

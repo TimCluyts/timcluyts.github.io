@@ -10,6 +10,18 @@
     color: $white-color;
 }
 
+.black-text {
+    color: $black-color;
+}
+
+a.post-link.black-text {
+    color: $black-color;
+    
+    &:visited {
+        color: darken($black-color, 15%);
+    }
+}
+
 .glass{
     background: $glass-color;
 }

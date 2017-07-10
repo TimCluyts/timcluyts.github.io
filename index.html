@@ -13,8 +13,10 @@ layout: default
       <div class="col col-9">
         <div class="block glass">
             <div class="block-body">
-                <h2>Yo, I'm Dude Labouwski</h2>
-                <p class="grey-text">Aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores ausLorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus Lorepsum ipsum lores aus</p>
+                <h2>Tim Cluyts</h2>
+                <p class="grey-text">
+                    Content text comes here
+                </p>
             </div>
         </div>
       </div>  
@@ -25,7 +27,11 @@ layout: default
         <div class="block" style="background-image:url(assets/{{port.img}})">
             <div class="block-body height-{{port.height}}">              
                 <h2 class="align-bottom-right">
-                  {{ port.title }}
+                 {% if port.fontColor %}
+                 <a class="post-link {{port.fontColor}}" href="{{ port.url | prepend: site.baseurl }}"> {{ port.title }}</a>
+                 {% else %}
+                 <a class="post-link white-text" href="{{ port.url | prepend: site.baseurl }}"> {{ port.title }}</a>
+                 {% endif %}
                 </h2>
             </div>
         </div>

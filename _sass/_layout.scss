@@ -316,3 +316,26 @@
 .backgroundImage {
     background-repeat: no-repeat;
 }
+
+.menuItem {
+    height: 100%;
+    float: left;
+    min-width: 60px;
+    text-align: center;
+    
+    &:hover {
+        background-color: $glass-color;
+        cursor: pointer;
+    }
+}
+
+#experienceTimeline{
+    .panel {
+        cursor: pointer;       
+    }  
+    //display: none;  
+}
+
+#technologies{
+    display: none;  
+}

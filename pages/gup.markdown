@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "Contractor's portal"
+title:  "GetSudo Units Planner"
 author: Tim Cluyts
 color: red
 width:   3 
 height:  1
 date:   2016-03-30 11:31:49 +0200
 categories: projects
-permalink: cp
+permalink: gup
+isMain: false
 ---
 
-Contractor's portal page - description page
+GetSudo page - description here

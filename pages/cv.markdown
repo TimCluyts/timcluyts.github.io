@@ -1,0 +1,120 @@
+---
+layout: post
+title:  "CV"
+author: Tim Cluyts
+color: red
+width:   3 
+height:  1
+date:   2016-03-30 11:31:49 +0200
+categories: info
+permalink: cv
+isMain: true
+---
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group btn-group-lg btn-group-justified" data-toggle="buttons">
+            <label class="btn btn-primary ">
+                <input type="radio" name="options" id="showTimeline" autocomplete="off"  /> Timeline
+            </label>
+            <!--<label class="btn btn-primary active">
+                <input type="radio" name="options" id="showTechnologies" autocomplete="off"  checked/> Technologies
+            </label>-->
+            
+        </div>
+    </div>
+</div>
+<div class="timeline" id="experienceTimeline">
+    {%- for employer in site.data.exp -%}
+        <span class="timeline-label ">
+                <h1><span class="label label-info">{{ employer.Company }}</span></h1>
+        </span>
+        {%- assign start = employer.StartDate | date: "%Y" -%} 
+        {%- assign end = employer.EndDate | default : "now" | date: "%Y" -%} 
+        {%- if employer.Projects.size == 1 -%}
+            <span class="timeline-label ">
+                        <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
+            </span>
+            {%- for project in employer.Projects -%} 
+                {%- include projectTimeline.html -%} 
+            {%- endfor -%} 
+        {%- else -%} 
+            {%- for year in (start..end) reversed -%}
+                <span class="timeline-label ">
+                    <h3><span class="label label-success">{{ year }}</span></h3>
+                </span>
+                {%- for project in employer.Projects -%} 
+                    {%- assign projectStart = project.StartDate | date : "%Y" | round -%} 
+                    {%- if projectStart == year -%} 
+                        {%- include projectTimeline.html -%} 
+                    {%- endif -%}
+                 {%- endfor -%} 
+            {%- endfor -%} 
+        {%- endif -%} 
+    {%- endfor -%}
+</div>
+<div id="technologies">
+    <div class="row">
+        <div class="col-xs-12">&nbsp;</div>
+        <div class="clearfix"></div>
+    </div>
+    {%- assign tag_names = "" | split: "|" -%} 
+    {%- for employer in site.data.exp -%} 
+        {%- for project in employer.Projects -%} 
+            {%- assign alltech = project.TechnicalCategories | append: ", " | append: alltech -%} 
+            {%- assign t = project.TechnicalCategories | split: ", " -%} 
+            {%- for oneTech in t -%} 
+                {%- assign estripped= oneTech | strip -%} 
+                {%- assign tag_names = tag_names | push: estripped  -%} 
+            {%- endfor -%} 
+        {%- endfor -%}
+    {%- endfor -%} 
+    {%- assign tag_names = tag_names | uniq | sort -%} 
+    {%- assign monthes = "" | split:  "|" -%} 
+    {%- assign maxMonthes=0 -%} 
+    {%- for oneTech in tag_names -%} 
+        {%- assign totalMonthes= 0 -%} 
+        {%- for employer in site.data.exp -%} 
+            {%- for project in employer.Projects -%} 
+                {%- if project.TechnicalCategories contains oneTech -%} 
+                    {%- assign totalMonthes = project.DurationInMonth | round | plus: totalMonthes -%} 
+                {%- endif -%} 
+            {%- endfor -%} 
+        {%- endfor -%} 
+        {%- assign v = oneTech | append: ',' | append:totalMonthes -%} 
+        {%- assign monthes = monthes | push: v -%} 
+        {%- if totalMonthes > maxMonthes-%} 
+            {%- assign maxMonthes = totalMonthes -%}
+        {%- endif -%} 
+    {%- endfor -%} 
+    {%- for e in monthes -%}
+    <div class="row">
+        <div class="col-lg-2 col-sm-3 col-xs-5">
+            {%- assign item = e | split: ',' -%}
+            <span>{{item[0]}}</span>
+        </div>
+        <div class="col-lg-10 col-sm-9 col-xs-7">
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{item[1]}}" aria-valuemin="0" aria-valuemax="{{maxMonthes}}"
+                    style="width: {{item[1] |round:2 | divided_by:maxMonthes | times: 100}}%;" title="{{item[1]}} monthes">
+                    {{item[1]}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {%- endfor -%}
+</div>
+
+<script>  
+jQuery(document).ready(function() {
+    $('#showTechnologies').on('change', function () {
+        $("#calendarView").hide();
+        $("#experienceTimeline").hide();
+        $("#technologies").show();
+    });
+    $('#showTimeline').on('change', function () {
+        $("#calendarView").hide();
+        $("#technologies").hide();
+        $("#experienceTimeline").show();
+    });  
+});
+</script>

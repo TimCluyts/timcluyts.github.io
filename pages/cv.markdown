@@ -35,7 +35,7 @@ isMain: true
                         <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
             </span>
             {% for project in employer.Projects %} 
-                {%- include projectTimeline.html %} 
+                {% include projectTimeline.html %} 
             {% endfor %} 
         {% else %} 
             {% for year in (start..end) reversed %}

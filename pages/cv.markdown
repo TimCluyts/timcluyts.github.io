@@ -28,29 +28,29 @@ isMain: true
         <span class="timeline-label ">
                 <h1><span class="label label-info">{{ employer.Company }}</span></h1>
         </span>
-        {%- assign start = employer.StartDate | date: "%Y" %} 
-        {%- assign end = employer.EndDate | default : "now" | date: "%Y" %} 
-        {%- if employer.Projects.size == 1 %}
+        {% assign start = employer.StartDate | date: "%Y" %} 
+        {% assign end = employer.EndDate | default : "now" | date: "%Y" %} 
+        {% if employer.Projects.size == 1 %}
             <span class="timeline-label ">
                         <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
             </span>
-            {%- for project in employer.Projects -%} 
-                {%- include projectTimeline.html -%} 
-            {%- endfor -%} 
-        {%- else -%} 
-            {%- for year in (start..end) reversed -%}
+            {% for project in employer.Projects %} 
+                {%- include projectTimeline.html %} 
+            {% endfor %} 
+        {% else %} 
+            {% for year in (start..end) reversed %}
                 <span class="timeline-label ">
                     <h3><span class="label label-success">{{ year }}</span></h3>
                 </span>
-                {%- for project in employer.Projects -%} 
-                    {%- assign projectStart = project.StartDate | date : "%Y" | round -%} 
-                    {%- if projectStart == year -%} 
-                        {%- include projectTimeline.html -%} 
-                    {%- endif -%}
-                 {%- endfor -%} 
-            {%- endfor -%} 
-        {%- endif -%} 
-    {%- endfor -%}
+                {% for project in employer.Projects %} 
+                    {% assign projectStart = project.StartDate | date : "%Y" | round %} 
+                    {% if projectStart == year %} 
+                        {% include projectTimeline.html %} 
+                    {% endif %}
+                 {% endfor %} 
+            {% endfor %} 
+        {% endif %} 
+    {% endfor %}
 </div>
 <!--
 <div id="technologies">

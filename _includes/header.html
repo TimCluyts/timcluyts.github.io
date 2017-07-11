@@ -19,9 +19,8 @@
         {% for my_page in site.pages %}
           {% if my_page.title %}
           {% if my_page.isMain == true %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
-          <div class="menuItem">{{ my_page.title }}
-          </div>
+          <a class="page-link menuItem" href="{{ my_page.url | prepend: site.baseurl }}">
+            {{ my_page.title }}
           </a>
           {% endif %}
           {% endif %}

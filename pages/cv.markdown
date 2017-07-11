@@ -24,7 +24,7 @@ isMain: true
     </div>
 </div>
 <div class="timeline" id="experienceTimeline">
-    {%- for employer in site.data.exp -%}
+    {% for employer in site.data.exp %}
         <span class="timeline-label ">
                 <h1><span class="label label-info">{{ employer.Company }}</span></h1>
         </span>
@@ -52,6 +52,7 @@ isMain: true
         {%- endif -%} 
     {%- endfor -%}
 </div>
+<!--
 <div id="technologies">
     <div class="row">
         <div class="col-xs-12">&nbsp;</div>
@@ -102,7 +103,7 @@ isMain: true
         </div>
     </div>
     {%- endfor -%}
-</div>
+</div>-->
 
 <script>  
 jQuery(document).ready(function() {

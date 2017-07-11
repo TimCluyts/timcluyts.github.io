@@ -28,9 +28,9 @@ isMain: true
         <span class="timeline-label ">
                 <h1><span class="label label-info">{{ employer.Company }}</span></h1>
         </span>
-        {%- assign start = employer.StartDate | date: "%Y" -%} 
-        {%- assign end = employer.EndDate | default : "now" | date: "%Y" -%} 
-        {%- if employer.Projects.size == 1 -%}
+        {%- assign start = employer.StartDate | date: "%Y" %} 
+        {%- assign end = employer.EndDate | default : "now" | date: "%Y" %} 
+        {%- if employer.Projects.size == 1 %}
             <span class="timeline-label ">
                         <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
             </span>

@@ -1,28 +1,31 @@
+-   id: c#
+    descr: c#    
+    xp: 7
 -   id: javascript
     descr: javascript    
     xp: 9
--   id: css
-    descr: css
-    color: teal
-    xp: 7
--   id: c#
-    descr: c#    
-    xp: 3
--   id: angular
-    descr: angularjs    
-    xp: 1
--   id: java
-    descr: java    
-    xp: 5
--   id: sass
-    descr: sass    
-    xp: 4
--   id: jquery
-    descr: jquery    
-    xp: 3
 -   id: node.js
     descr: node.js 
     xp: 9
+-   id: react.js
+    descr: react.js    
+    xp: 8
+-   id: SQL
+    descr: SQL    
+    xp: 9
+-   id: html
+    descr: html    
+    xp: 8
+-   id: css
+    descr: css
+    color: teal
+    xp: 6
+-   id: sass
+    descr: sass    
+    xp: 6
+-   id: jquery
+    descr: jquery    
+    xp: 7
 -   id: php
     descr: php
     xp: 4

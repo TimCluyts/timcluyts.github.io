@@ -25,6 +25,11 @@
           {% endif %}
           {% endif %}
         {% endfor %}
+        {% for my_site in site.data.sites %}
+          <div class="menuItem">
+            <a class="page-link" target="_blank" href="{{ my_site.url | prepend: site.baseurl }}">{{ my_site.id }}</a>
+          </div>
+        {% endfor %}
       </div>
     </nav>
 

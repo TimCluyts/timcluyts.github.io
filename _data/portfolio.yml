@@ -4,7 +4,6 @@
     width: 8
     height: 2
     url: cp
-    # fontColor: black-text
 -   id: 2
     title: GetSudo Units Planner 
     img: 2.jpg

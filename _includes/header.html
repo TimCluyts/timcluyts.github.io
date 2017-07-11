@@ -19,16 +19,19 @@
         {% for my_page in site.pages %}
           {% if my_page.title %}
           {% if my_page.isMain == true %}
-          <div class="menuItem">
-            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
+          <div class="menuItem">{{ my_page.title }}
           </div>
+          </a>
           {% endif %}
           {% endif %}
         {% endfor %}
         {% for my_site in site.data.sites %}
-          <div class="menuItem">
-            <a class="page-link" target="_blank" href="{{ my_site.url | prepend: site.baseurl }}">{{ my_site.id }}</a>
-          </div>
+          <a class="page-link" target="_blank" href="{{ my_site.url | prepend: site.baseurl }}">
+            <div class="menuItem">
+              {{ my_site.id }}
+            </div>
+          </a>
         {% endfor %}
       </div>
     </nav>

@@ -41,7 +41,8 @@
         color: $text-color;
         line-height: $base-line-height;
         font-size: 14px;
-
+        line-height: 57px;
+        float: left;
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
@@ -319,7 +320,7 @@
 
 .menuItem {
     height: 100%;
-    float: left;
+    //float: left;
     min-width: 60px;
     text-align: center;
     padding-left: 5px;

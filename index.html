@@ -22,7 +22,7 @@ layout: default
       </div>  
   </div>
   <div class="col col-12">
-    {% for port in site.data.portfolio %}
+    {%- for port in site.data.portfolio -%}
       <div class="col col-{{port.width}}">
         <div class="block" style="background-image:url(assets/{{port.img}})">
             <div class="block-body height-{{port.height}}">              
@@ -36,7 +36,7 @@ layout: default
             </div>
         </div>
       </div>
-    {% endfor %}
+    {%- endfor -%}
     </div>
   <div class="col col-9">
     {% for post in site.posts %}

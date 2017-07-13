@@ -1,3 +1,8 @@
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 /**
  * Site header
  */
@@ -343,4 +348,23 @@
 
 #technologies{
     display: none;  
+}
+
+.push-col-1 {
+    margin-left: -webkit-calc(8.33333333% - (#{$spacing-unit} / 2));
+    margin-left:         calc(8.33333333% - (#{$spacing-unit} / 2));
+}
+
+.lighter-color {
+    color: lighten($grey-color, 25%);
+}
+
+h3 {
+    color: lighten($grey-color, 45%);
+}
+
+.gupTitle {
+    margin-top: 15px;
+    font-weight: bold;
+    color: darken(#ff0000, 5%);
 }

@@ -14,7 +14,7 @@
   }
 
   &:after {
-    left: -($arrow-width - 1px) !important;
+    left: -($arrow-width) !important;
 
     border-right-width: $arrow-width - 1px !important;
   }

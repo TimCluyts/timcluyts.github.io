@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "highlighting"
+title:  "Welcome to React"
 color: red
-width:   3 
+width:   12
 height:  1
-date:   2016-03-30 11:31:49 +0200
-categories: jekyll update
+date:   2017-07-14 10:40:00 +0100
+categories: react nodejs express update
+active: true
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

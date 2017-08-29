@@ -6,19 +6,24 @@
     @extend %clearfix;
 }
 
-.site-header, .site-header a {
-    color: $header-text-color;
-}
-.site-header a:hover {
-    color: $header-hover-color;
-    text-decoration: underline;
-}
-
 .site-title {
     margin-top: 1em;
     margin-bottom: 1em;
     float: left;
     letter-spacing: 1px;
+}
+
+.site-header, .site-header a {
+    color: $brand-red-light;
+}
+
+.site-header a .site-title {
+    color: $header-text-color;
+}
+
+.site-header a:hover {
+    color: $header-hover-color;
+    text-decoration: none;
 }
 
 .site-nav {

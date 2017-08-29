@@ -10,11 +10,8 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 ## Contact
 
-Rebel base <br />
-[Tim] <br />
-Galaxy far far away<br />
+Tim <br />
 Email: [noreply@gmail.com]
 
 
-[Tim]: https://en.wikipedia.org/wiki/Tim
 [noreply@gmail.com]: mailto:noreply@gmail.com

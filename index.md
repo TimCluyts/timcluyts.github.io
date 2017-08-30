@@ -14,8 +14,8 @@ Here be some text about me...
 
 ## Contact
 
-Tim <br />
-Email: [noreply@gmail.com]
+Tim Cluyts<br />
+Email: [Tcluyts@gmail.com]
 
 
-[noreply@gmail.com]: mailto:noreply@gmail.com
+[noreply@gmail.com]: mailto:Tcluyts@gmail.com

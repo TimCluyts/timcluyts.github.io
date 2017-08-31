@@ -10,8 +10,6 @@ Here be some text about me...
 
 <span class="quote">"I love the fact that you seek to discuss changes and think with us to find an even better solution" - Customer's product owner</span>
 
-<span class="quote">"You are always ready to help us out with a smile" - Customer on my last project</span>
-
 ## Contact
 
 Tim Cluyts<br />

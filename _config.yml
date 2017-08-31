@@ -1,6 +1,6 @@
 title: Tim Cluyts
 description: > #this is to ignore whitespaces
-    Some customer description could go here.
+    "You are always ready to help us out with a smile" - Customer on my last project
 sourcecode: "https://github.com/gchauras/much-worse-jekyll-theme"
 
 permalink: blog/:year/:month/:day/:title

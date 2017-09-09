@@ -231,19 +231,29 @@ ul.listing li.listing-item a {
     margin-top: 2%;
     margin-left: calc(10% - 40px);
 
+    font-size: 25pt;
+    color: $white;
+
     border-radius: 50%;
     background-image: -webkit-radial-gradient(center, 80px 80px, $brand-purple-much-lighter 93%, $brand-purple-lighter 100%);
     position :absolute;    
+
+    .textNode {
+        display: block;
+        -ms-transform: rotate(-20deg) translate(15px,15px);/* IE 9 */
+        -webkit-transform: rotate(-20deg) translate(15px,15px); /* Chrome, Safari, Opera */
+        transform: rotate(-20deg) translate(15px,15px);
+    }
 }
 
 .show {
-    animation: mymove 0.5s steps(25) forwards;
-    -webkit-animation: mymove 0.5s steps(25) forwards; /* Safari 4.0 - 8.0 */
+    animation: mymove 0.3s steps(10) forwards;
+    -webkit-animation: mymove 0.3s steps(10) forwards; /* Safari 4.0 - 8.0 */
 }
   
 .hide {
-    animation: mymove 0.5s steps(25) reverse;
-    -webkit-animation: mymove 0.5s steps(25) reverse; /* Safari 4.0 - 8.0 */
+    animation: mymove 0.3s steps(10) reverse;
+    -webkit-animation: mymove 0.3s steps(10) reverse; /* Safari 4.0 - 8.0 */
 }
   
   /* Safari 4.0 - 8.0 */

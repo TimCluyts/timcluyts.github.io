@@ -8,7 +8,9 @@ For my full CV, please refer to <a href="https://stackoverflow.com/story/timcluy
 
 <div class="leftBox">
     <div class="mainNode"></div>
-    <div class="secondaryNode"></div>
+    <div class="secondaryNode">
+        <div class="textNode">C#</div>
+    </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">

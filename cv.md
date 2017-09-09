@@ -6,6 +6,23 @@ permalink: /cv/
 
 For my full CV, please refer to <a href="https://stackoverflow.com/story/timcluyts" target="_blank">my Stackoverflow CV</a> or <a href="https://www.linkedin.com/in/tim-cluyts" target="_blank">my linkedIn account</a>
 
+<div class="leftBox">
+    <div class="mainNode"></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+$('.mainNode').click(function() {
+    var element = $('.mainNode');
+    if (!element.hasClass('show')) {
+        element.addClass('show');
+        element.removeClass('hide');
+    } else {
+        element.addClass('hide');
+        element.removeClass('show');
+    }
+})
+</script>
+
 <svg version="1.1"
      baseProfile="full"
      width="550" height="400"
@@ -28,6 +45,18 @@ For my full CV, please refer to <a href="https://stackoverflow.com/story/timcluy
             <tspan>SQL</tspan>
         </text>
     </g>
+    <g class="secondaryNodeTechnologies">
+        <circle cx="18%" cy="55%" r="40" class="secondaryNode"/>
+        <text x="18%" y="55%" font-size="20" transform="rotate(12, 80, 215)" text-anchor="middle" fill="white">
+            <tspan>ReactJS</tspan>
+        </text>
+    </g>
+    <g class="secondaryNodeTechnologies">
+        <circle cx="50%" cy="65%" r="40" class="secondaryNode"/>
+        <text x="50%" y="65%" font-size="20" transform="rotate(-14, 300, 260)" text-anchor="middle" fill="white">
+            <tspan>.NET</tspan>
+        </text>
+    </g>
 </svg>
 
 <svg version="1.1"
@@ -41,3 +70,11 @@ For my full CV, please refer to <a href="https://stackoverflow.com/story/timcluy
         </text>
     </g>
 </svg>
+
+<div class="technologiesSubDiv">
+    <div class="inner">
+        <div class="title">
+            Here be some text
+        </div>
+    </div>
+</div>

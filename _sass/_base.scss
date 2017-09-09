@@ -185,7 +185,7 @@ ul.listing li.listing-item a {
     
     border-radius: 30px;
 
-    margin-top: -50px;
+    margin-top: 20px;
     margin-left: 50px;
 
     color: $white;
@@ -203,7 +203,7 @@ ul.listing li.listing-item a {
 
 .leftBox {
     width: 550px;
-    height: 400px;
+    height: 600px;
 
     border: 1px solid gray;
 
@@ -211,7 +211,7 @@ ul.listing li.listing-item a {
 }
 
 .mainNode {
-    animation-name: mymove
+    animation-name: mymove;
     width: 160px;
     height: 160px;
 
@@ -224,26 +224,65 @@ ul.listing li.listing-item a {
 }
 
 .show {
-    -webkit-animation: mymove 1s forwards; /* Safari 4.0 - 8.0 */
     animation: mymove 1s forwards;
-    animation-delay: .2s;
+    -webkit-animation: mymove 1s steps(10) forwards; /* Safari 4.0 - 8.0 */
 }
-
+  
 .hide {
-    -webkit-animation: mymove 1s reverse forwards; /* Safari 4.0 - 8.0 */
-    animation: mymove 1s reverse forwards;
-    animation-delay: .2s;
+    animation: mymove 0.5s reverse;
+    -webkit-animation: mymove 0.5s steps(10) reverse; /* Safari 4.0 - 8.0 */
 }
-
-/* Safari 4.0 - 8.0 */
+  
+  /* Safari 4.0 - 8.0 */
 @-webkit-keyframes mymove {
-    from   {top: 0px;}
-    to {top: 200px;}
-}
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+    
+    25% {
+        top: 125px;
+        left: -10px;
+    }
 
-/* Standard syntax */
+    50% {
+        top: 250px;
+        left: -50px;
+    }
+
+    75% {
+        top: 375px;
+        left: -10px;
+    }
+
+    100% {
+        top: 500px;
+    }
+}
+  
+  /* Standard syntax */
 @keyframes mymove {
-    from   {top: 0px;}
-    to {top: 200px;}
-}
+    0% {
+        top: 0px;
+        left: 0px;
+    }
 
+    25% {
+        top: 125px;
+        left: -10px;
+    }
+
+    50% {
+        top: 250px;
+        left: -50px;
+    }
+
+    75% {
+        top: 375px;
+        left: -10px;
+    }
+
+    100% {
+        top: 500px;
+    }
+}

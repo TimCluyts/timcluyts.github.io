@@ -12,17 +12,19 @@ For my full CV, please refer to <a href="https://stackoverflow.com/story/timcluy
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
 $('.mainNode').click(function() {
-    var element = $('.mainNode');
+    var element = $('.mainNode');   
     if (!element.hasClass('show')) {
-        element.addClass('show');
-        element.removeClass('hide');
+        element.removeClass('hide');        
+        element.addClass('show'); 
+        element.before(element.clone(true)).remove();
     } else {
+        element.removeClass('show');        
         element.addClass('hide');
-        element.removeClass('show');
-    }
+        element.before(element.clone(true)).remove();
+    }    
 })
 </script>
-
+<!-- 
 <svg version="1.1"
      baseProfile="full"
      width="550" height="400"
@@ -57,8 +59,9 @@ $('.mainNode').click(function() {
             <tspan>.NET</tspan>
         </text>
     </g>
-</svg>
+</svg>-->
 
+<!-- 
 <svg version="1.1"
      baseProfile="full"
      width="550" height="400"
@@ -69,7 +72,7 @@ $('.mainNode').click(function() {
             <tspan>Projects</tspan>
         </text>
     </g>
-</svg>
+</svg> -->
 
 <div class="technologiesSubDiv">
     <div class="inner">

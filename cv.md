@@ -17,11 +17,11 @@ For my full CV, please refer to <a href="https://stackoverflow.com/story/timcluy
 $('.secondaryNode').click(function() {
     var element = $('.secondaryNode');   
     if (!element.hasClass('show')) {
-        element.removeClass('hide');        
-        element.addClass('show'); 
+        element.removeClass('hide');
+        element.addClass('show');
         element.before(element.clone(true)).remove();
     } else {
-        element.removeClass('show');        
+        element.removeClass('show');
         element.addClass('hide');
         element.before(element.clone(true)).remove();
     }    
